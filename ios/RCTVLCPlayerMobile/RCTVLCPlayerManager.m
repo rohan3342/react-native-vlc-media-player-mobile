@@ -4,7 +4,7 @@
 
 @implementation RCTVLCPlayerManager
 
-RCT_EXPORT_MODULE();
+RCT_EXPORT_MODULE(RCTVLCPlayerMobile);
 
 @synthesize bridge = _bridge;
 

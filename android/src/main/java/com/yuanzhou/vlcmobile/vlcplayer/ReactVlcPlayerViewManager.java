@@ -15,7 +15,7 @@ import javax.annotation.Nullable;
 
 public class ReactVlcPlayerViewManager extends SimpleViewManager<ReactVlcPlayerView> {
 
-    private static final String REACT_CLASS = "RCTVLCPlayer";
+    private static final String REACT_CLASS = "RCTVLCPlayerMobile";
 
     private static final String PROP_SRC = "source";
     private static final String PROP_SRC_URI = "uri";

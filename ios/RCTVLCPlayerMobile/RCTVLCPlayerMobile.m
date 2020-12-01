@@ -1,5 +1,5 @@
 #import "React/RCTConvert.h"
-#import "RCTVLCPlayer.h"
+#import "RCTVLCPlayerMobile.h"
 #import "React/RCTBridgeModule.h"
 #import "React/RCTEventDispatcher.h"
 #import "React/UIView+React.h"
@@ -11,7 +11,7 @@ static NSString *const playbackBufferEmptyKeyPath = @"playbackBufferEmpty";
 static NSString *const readyForDisplayKeyPath = @"readyForDisplay";
 static NSString *const playbackRate = @"rate";
 
-@implementation RCTVLCPlayer
+@implementation RCTVLCPlayerMobile
 {
     
     /* Required to publish events */

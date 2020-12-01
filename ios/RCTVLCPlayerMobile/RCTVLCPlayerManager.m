@@ -1,5 +1,5 @@
 #import "RCTVLCPlayerManager.h"
-#import "RCTVLCPlayer.h"
+#import "RCTVLCPlayerMobile.h"
 #import "React/RCTBridge.h"
 
 @implementation RCTVLCPlayerManager
@@ -10,7 +10,7 @@ RCT_EXPORT_MODULE();
 
 - (UIView *)view
 {
-    return [[RCTVLCPlayer alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
+    return [[RCTVLCPlayerMobile alloc] initWithEventDispatcher:self.bridge.eventDispatcher];
 }
 
 /* Should support: onLoadStart, onLoad, and onError to stay consistent with Image */

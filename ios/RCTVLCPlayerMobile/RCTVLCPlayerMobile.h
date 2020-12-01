@@ -2,7 +2,7 @@
 
 @class RCTEventDispatcher;
 
-@interface RCTVLCPlayer : UIView
+@interface RCTVLCPlayerMobile : UIView
 
 @property (nonatomic, copy) RCTBubblingEventBlock onVideoProgress;
 @property (nonatomic, copy) RCTBubblingEventBlock onVideoPaused;

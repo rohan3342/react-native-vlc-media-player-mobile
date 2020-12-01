@@ -164,7 +164,7 @@ export default class VLCPlayer extends Component {
       progressUpdateInterval: 250,
     });
 
-    return <RCTVLCPlayer ref={this._assignRoot} {...nativeProps} />;
+    return <RCTVLCPlayerMobile ref={this._assignRoot} {...nativeProps} />;
   }
 }
 
@@ -222,4 +222,4 @@ const styles = StyleSheet.create({
     overflow: "hidden",
   },
 });
-const RCTVLCPlayer = requireNativeComponent("RCTVLCPlayer", VLCPlayer);
+const RCTVLCPlayerMobile = requireNativeComponent("RCTVLCPlayerMobile", VLCPlayer);

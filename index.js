@@ -1,7 +1,7 @@
 
 const VLCPlayerControl = {
-  VLCPlayer: require('./VLCPlayer').default,
-  VlCPlayerView: require('./playerView/index').default,
+  VLCPlayerMobile: require('./VLCPlayer').default,
+  VlCPlayerMobileView: require('./playerView/index').default,
 }
 
 module.exports = VLCPlayerControl;

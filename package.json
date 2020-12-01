@@ -1,5 +1,5 @@
 {
-  "name": "react-native-vlc-media-player",
+  "name": "react-native-vlc-media-player-mobile",
   "version": "1.0.29",
   "description": "React native media player for video streaming and playing. Supports RTSP,RTMP and other protocols supported by VLC player",
   "main": "index.js",

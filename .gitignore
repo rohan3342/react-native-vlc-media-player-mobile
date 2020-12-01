@@ -113,3 +113,11 @@ dist
 .yarn/unplugged
 .yarn/build-state.yml
 .pnp.*
+
+# Android/IntelliJ
+#
+build/
+.idea
+.gradle
+local.properties
+*.iml

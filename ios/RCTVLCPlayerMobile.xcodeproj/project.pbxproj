@@ -28,7 +28,7 @@
 /* Begin PBXFileReference section */
 		0C1A0EC81D07E18700441684 /* RCTVLCPlayerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RCTVLCPlayerManager.m; sourceTree = "<group>"; };
 		0C1A0EC91D07E18700441684 /* RCTVLCPlayerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RCTVLCPlayerManager.h; sourceTree = "<group>"; };
-		0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayer.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTVLCPlayer.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayerMobile.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRCTVLCPlayerMobile.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CA30C471D07E0DB003B09F9 /* RCTVLCPlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RCTVLCPlayer.h; sourceTree = "<group>"; };
 		0CA30C491D07E0DB003B09F9 /* RCTVLCPlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RCTVLCPlayer.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,7 +47,7 @@
 		0CA30C3B1D07E0DB003B09F9 = {
 			isa = PBXGroup;
 			children = (
-				0CA30C461D07E0DB003B09F9 /* RCTVLCPlayer */,
+				0CA30C461D07E0DB003B09F9 /* RCTVLCPlayerMobile */,
 				0CA30C451D07E0DB003B09F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,12 +55,12 @@
 		0CA30C451D07E0DB003B09F9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayer.a */,
+				0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayerMobile.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0CA30C461D07E0DB003B09F9 /* RCTVLCPlayer */ = {
+		0CA30C461D07E0DB003B09F9 /* RCTVLCPlayerMobile */ = {
 			isa = PBXGroup;
 			children = (
 				0C1A0EC81D07E18700441684 /* RCTVLCPlayerManager.m */,
@@ -68,15 +68,15 @@
 				0CA30C471D07E0DB003B09F9 /* RCTVLCPlayer.h */,
 				0CA30C491D07E0DB003B09F9 /* RCTVLCPlayer.m */,
 			);
-			path = RCTVLCPlayer;
+			path = RCTVLCPlayerMobile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CA30C431D07E0DB003B09F9 /* RCTVLCPlayer */ = {
+		0CA30C431D07E0DB003B09F9 /* RCTVLCPlayerMobile */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CA30C4D1D07E0DB003B09F9 /* Build configuration list for PBXNativeTarget "RCTVLCPlayer" */;
+			buildConfigurationList = 0CA30C4D1D07E0DB003B09F9 /* Build configuration list for PBXNativeTarget "RCTVLCPlayerMobile" */;
 			buildPhases = (
 				0CA30C401D07E0DB003B09F9 /* Sources */,
 				0CA30C411D07E0DB003B09F9 /* Frameworks */,
@@ -86,9 +86,9 @@
 			);
 			dependencies = (
 			);
-			name = RCTVLCPlayer;
+			name = RCTVLCPlayerMobile;
 			productName = RCTVLCPlayer;
-			productReference = 0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayer.a */;
+			productReference = 0CA30C441D07E0DB003B09F9 /* libRCTVLCPlayerMobile.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -105,7 +105,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0CA30C3F1D07E0DB003B09F9 /* Build configuration list for PBXProject "RCTVLCPlayer" */;
+			buildConfigurationList = 0CA30C3F1D07E0DB003B09F9 /* Build configuration list for PBXProject "RCTVLCPlayerMobile" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -118,7 +118,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CA30C431D07E0DB003B09F9 /* RCTVLCPlayer */,
+				0CA30C431D07E0DB003B09F9 /* RCTVLCPlayerMobile */,
 			);
 		};
 /* End PBXProject section */
@@ -267,7 +267,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CA30C3F1D07E0DB003B09F9 /* Build configuration list for PBXProject "RCTVLCPlayer" */ = {
+		0CA30C3F1D07E0DB003B09F9 /* Build configuration list for PBXProject "RCTVLCPlayerMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CA30C4B1D07E0DB003B09F9 /* Debug */,
@@ -276,7 +276,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CA30C4D1D07E0DB003B09F9 /* Build configuration list for PBXNativeTarget "RCTVLCPlayer" */ = {
+		0CA30C4D1D07E0DB003B09F9 /* Build configuration list for PBXNativeTarget "RCTVLCPlayerMobile" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0CA30C4E1D07E0DB003B09F9 /* Debug */,

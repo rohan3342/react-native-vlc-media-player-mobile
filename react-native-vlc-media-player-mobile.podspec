@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name         = "react-native-vlc-media-player"
+  s.name         = "react-native-vlc-media-player-mobile"
   s.version      = "1.0.6"
   s.summary      = "VLC player"
   s.requires_arc = true

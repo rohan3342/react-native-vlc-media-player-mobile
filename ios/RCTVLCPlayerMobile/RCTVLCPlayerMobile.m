@@ -137,8 +137,8 @@ static NSString *const playbackRate = @"rate";
     [_player setDrawable:self];
     _player.delegate = self;
     _player.scaleFactor = 0;
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mediaPlayerStateChanged:) name:VLCMediaPlayerStateChanged object:nil];
-    //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mediaPlayerTimeChanged:) name:VLCMediaPlayerTimeChanged object:nil];
+    // [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mediaPlayerStateChanged:) name:VLCMediaPlayerStateChanged object:nil];
+    // [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(mediaPlayerTimeChanged:) name:VLCMediaPlayerTimeChanged object:nil];
     NSMutableDictionary *mediaDictonary = [NSMutableDictionary new];
     //设置缓存多少毫秒
     // [mediaDictonary setObject:@"0" forKey:@"network-caching"];
@@ -243,9 +243,73 @@ static NSString *const playbackRate = @"rate";
                                    @"currentTime": [NSNumber numberWithInt:currentTime],
                                    @"remainingTime": [NSNumber numberWithInt:remainingTime],
                                    @"duration":[NSNumber numberWithInt:duration],
-                                   @"position":[NSNumber numberWithFloat:_player.position]
+                                   @"position":[NSNumber numberWithFloat:_player.position],
+                                   @"textTracks": [self getTextTrackInfo],
+                                   @"audioTracks": [self getAudioTrackInfo],
                                    });
         }
+    }
+}
+
+//Method to get sub-titles
+- (NSArray *)getTextTrackInfo
+{
+    // if streaming video, we extract the text tracks
+    NSMutableArray *textTracks = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < _player.videoSubTitlesNames.count; ++i) {
+        
+        NSString *language = [_player.videoSubTitlesNames objectAtIndex:i];
+        if (![[language lowercaseString] isEqualToString:@"disable"]) {
+          // Do nothing. We want to ensure option is nil
+            NSDictionary *textTrack = @{
+                @"index": [NSNumber numberWithInt:i],
+                @"title": language,
+                @"language": language
+            };
+            [textTracks addObject:textTrack];
+        }
+    }
+    return textTracks;
+}
+
+//Method to get audio tracks
+- (NSArray *)getAudioTrackInfo
+{
+    NSMutableArray *audioTracks = [[NSMutableArray alloc] init];
+    
+    for (int i = 0; i < _player.audioTrackNames.count; ++i) {
+        
+        NSString *language = [_player.audioTrackNames objectAtIndex:i];
+        if (![[language lowercaseString] isEqualToString:@"disable"]) {
+          // Do nothing. We want to ensure option is nil
+            NSDictionary *audioTrack = @{
+                @"index": [NSNumber numberWithInt:i],
+                @"title": language,
+                @"language": language
+            };
+            [audioTracks addObject:audioTrack];
+        }
+    }
+    return audioTracks;
+}
+
+//Method to select sub-title from list
+- (void)setSelectVideoSubtitleIndex:(NSInteger)index
+{
+    index += 1;
+    if (index >= 0 && index < _player.videoSubTitlesIndexes.count) {
+        _player.currentVideoSubTitleIndex = [_player.videoSubTitlesIndexes[index] intValue];
+    }
+}
+
+//Method to select audio from list
+- (void)setSelectAudioTrackIndex:(NSInteger)index
+{
+    index += 1;
+    if (index >= 0 && index < _player.audioTrackIndexes.count) {
+        //we can cast this cause we won't have more than 2 million audiotracks
+        _player.currentAudioTrackIndex = [_player.audioTrackIndexes[index] intValue];
     }
 }
 

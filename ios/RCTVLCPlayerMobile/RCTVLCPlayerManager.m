@@ -37,4 +37,7 @@ RCT_EXPORT_VIEW_PROPERTY(resume, BOOL);
 RCT_EXPORT_VIEW_PROPERTY(videoAspectRatio, NSString);
 RCT_EXPORT_VIEW_PROPERTY(snapshotPath, NSString);
 
+RCT_EXPORT_VIEW_PROPERTY(selectVideoSubtitleIndex, NSInteger);
+RCT_EXPORT_VIEW_PROPERTY(selectAudioTrackIndex, NSInteger);
+
 @end

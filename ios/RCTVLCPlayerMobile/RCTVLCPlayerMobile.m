@@ -155,6 +155,21 @@ static NSString *const playbackRate = @"rate";
         [self play];
 }
 
+- (void)setFullScreen:(BOOL)isFullScreen
+{
+    if(isFullScreen) {
+        UIScreen *screen = [UIScreen mainScreen];
+        NSString *cropString = [NSString stringWithFormat: @"%i:%i", (int)screen.bounds.size.width, (int)screen.bounds.size.height];
+        char *char_content = [cropString cStringUsingEncoding:NSASCIIStringEncoding];
+        _player.videoCropGeometry = char_content;
+    }
+    else {
+        _player.videoCropGeometry = NULL;
+    }
+     return;
+
+ }
+
 - (void)mediaPlayerTimeChanged:(NSNotification *)aNotification
 {
     [self updateVideoProgress];

@@ -175,6 +175,7 @@ VLCPlayer.propTypes = {
   resume: PropTypes.bool,
   snapshotPath: PropTypes.string,
   paused: PropTypes.bool,
+  fullScreen: PropTypes.bool,
 
   autoAspectRatio: PropTypes.bool,
   videoAspectRatio: PropTypes.string,

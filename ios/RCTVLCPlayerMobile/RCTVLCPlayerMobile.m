@@ -261,6 +261,11 @@ static NSString *const playbackRate = @"rate";
                                    @"position":[NSNumber numberWithFloat:_player.position],
                                    @"textTracks": [self getTextTrackInfo],
                                    @"audioTracks": [self getAudioTrackInfo],
+                                   @"naturalSize": @{
+                                           @"width": width,
+                                           @"height": height,
+                                   }
+                                   });
                                    });
         }
     }

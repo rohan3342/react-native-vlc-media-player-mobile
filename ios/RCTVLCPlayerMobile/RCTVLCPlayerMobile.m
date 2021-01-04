@@ -269,10 +269,9 @@ static NSString *const playbackRate = @"rate";
                                            @"height": height,
                                    }
                                    });
-                                   });
+           }
         }
     }
-}
 
 //Method to get sub-titles
 - (NSArray *)getTextTrackInfo
